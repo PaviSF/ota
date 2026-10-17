@@ -22,4 +22,7 @@ jobs:
       - run: npm ci
       - run: npm run typecheck
       - run: npm test
+      - name: dist/ is up to date with src/
+        if: matrix.os == 'ubuntu-latest' && matrix.node == 22
+        run: npm run check-dist
       - run: node dist/cli.js --version

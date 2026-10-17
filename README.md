@@ -71,6 +71,8 @@ export default {
 
 ## Development
 
+`dist/` is committed so installing from GitHub needs no build step. After changing `src/`, run `npm run build` and commit `dist/` too (CI checks it's in sync).
+
 ```bash
 npm install
 npm run dev        # rebuild on change; run with node dist/cli.js

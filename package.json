@@ -17,7 +17,7 @@
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "prepare": "tsup"
+    "check-dist": "tsup && git diff --exit-code -- dist"
   },
   "repository": {
     "type": "git",
