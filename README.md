@@ -5,8 +5,12 @@ Interactive terminal app for pushing EAS OTA updates. It remembers your versions
 ## Install
 
 ```bash
-npm i -g github:PaviSF/ota
+npm i -g https://github.com/PaviSF/ota/archive/refs/heads/main.tar.gz
 ```
+
+Run the same command again to update (add `--prefer-online` if it doesn't pick up the latest).
+
+> Don't use `npm i -g github:PaviSF/ota`. For global installs from git, npm leaves a symlink to a temporary clone that it then deletes. `ota` then fails with `Cannot find module ...\dist\cli.js`. The tarball URL installs a real copy.
 
 Requires Node 18+ and the [EAS CLI](https://docs.expo.dev/eas-update/getting-started/) (`eas`) on your PATH.
 
